@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+	<link href="shop.css" rel="stylesheet" media="all">
+	<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap" rel="stylesheet">
+    <title>期末專題展示</title>
+	<script type="text/javascript">
+		function show() {
+  			const form = document.forms['form'];
+  			const name = form.elements.name.value;
+  			const email = form.elements.email.value;
+  			const phone = form.elements.phone.value;
+  			const address = form.elements.add.value;
+  			const gender = form.elements.sex.value;
+
+  			// 檢查必填欄位是否有填寫
+  			if (!name || !email || !phone || !address || !gender) {
+    			alert("請填寫所有必填欄位");
+				return;
+  			}
+
+  			// 檢查電話格式
+  			if (!validatePhone(phone)) {
+    			alert("請輸入正確的電話格式");
+    			return;
+  			}
+
+  			// 檢查電子郵件格式
+  			if (!validateEmail(email)) {
+				alert("請輸入正確的電子郵件格式");
+    		return;
+  			}
+
+  			// 若通過驗證，顯示聯絡資訊
+  			alert(
+    			"聯絡資訊:\n" +
+    			"姓名：" + name + "\n" +
+    			"性別：" + (gender === 'male' ? '男' : '女') + "\n" +
+    			"聯絡電話：" + phone + "\n" +
+    			"E-Mail：" + email + "\n" +
+    			"地址：" + address + "\n" +
+    			"請確認您的聯絡資訊!"
+  				);
+		}
+
+		function validatePhone(phone) {
+			// 正則表達式，匹配十位數字的電話號碼格式
+			const phonePattern = /^\d{10}$/;
+			// 使用正則表達式進行驗證
+			return phonePattern.test(phone);
+		}
+
+
+		function validateEmail(email) {
+  			// 正則表達式，匹配常見的電子郵件地址格式
+  			const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  			// 使用正則表達式進行驗證
+  			return emailPattern.test(email);
+		}
+	
+	function show1 () {
+		alert("感謝您的訂購!")
+	}
+	
+	</script>
+</head>
+    
+<body>
+	<nav>
+        <ul>
+            <li><a href="index.html" target="_parent">首　　頁</a></li>
+            <li><a href="intro.html" target="_parent">品牌介紹</a></li>
+            <li><a href="product.html" target="_parent">商品列表</a></li>
+            <li><a href="shop.html" target="_parent">線上購物</a></li>
+        </ul>
+    </nav>
+    <main id="contents">
+		
+	<form class="Form" id="form" name="form" action="" method="post">
+		<p><strong><span class="require">*</span>為必填項目</strong></p>
+  
+  		<table class="Table">
+    	<caption>聯絡資訊</caption>
+    	<tr>
+      		<th>姓名 *</th>
+			<td>
+        	  <input type="text" name="name" id="name" placeholder="請輸入您的姓名" required autofocus>
+      		</td>
+    	</tr>
+		<tr>
+			<th>性別 *</th>
+			<td>
+				<input type="radio" name="sex" id="male" value="male">
+				<label for="male">男</label>
+				<input type="radio" name="sex" id="female" value="female">
+				<label for="female">女</label>
+			</td>
+		</tr>
+		<tr>
+			<th>連絡電話 *</th>
+			<td>
+				<input type="tel" name="phone" id="phone" placeholder="請輸入正確的電話格式" required>
+			</td>
+		</tr>
+		<tr>
+      		<th>E-Mail *</th>
+      		<td>
+        	  <input type="email" name="email" placeholder="請輸入正確的email格式" required>
+        	  <small>※請輸入半形文字</small>
+      		</td>
+    	</tr>
+		<tr>
+      		<th>地址 *</th>
+      		<td>
+        	  <input type="text" name="add" id="add" placeholder="請輸入正確的地址" required>
+      		</td>
+    	</tr>
+		</table>
+		
+		<section class="Btns">
+			<input type="reset" value="清除重填">
+    		<input type="submit" onClick="show()" value="送出">
+		</section>
+		
+	</form>
+	<p>　</p>
+	<hr>
+	<p>　</p>
+	<form class="Form" action="#" method="post">
+	<table class="Table">
+		<caption>訂購商品</caption>
+		<tr>
+			<th>來點不一樣的<br>
+				<small>氣泡飲、果昔、冰沙</small></th>
+			<td>
+				<input type="checkbox" name="drink" id="Blueberry sparkling drink" value="1">
+				<label for="Blueberry sparkling drink">藍莓汽泡飲</label>
+				<input type="number" name="drink-quantity" id="Blueberry sparkling drink-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Colorful fruit sparkling drink" value="2">
+				<label for="Colorful fruit sparkling drink">繽紛水果汽泡飲</label>
+				<input type="number" name="drink-quantity" id="Colorful fruit sparkling drink-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Pineapple Sparkling Drink" value="3">
+				<label for="Pineapple Sparkling Drink">鳳梨汽泡飲</label>
+				<input type="number" name="drink-quantity" id="Pineapple Sparkling Drink-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Luca Rose Sparkling Drink" value="4">
+				<label for="Luca Rose Sparkling Drink">蘆卡玫瑰氣泡飲</label>
+				<input type="number" name="drink-quantity" id="Luca Rose Sparkling Drink-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Manuka Honey Rose Drink" value="5">
+				<label for="Manuka Honey Rose Drink">麥蘆卡玫瑰蜂蜜飲</label>
+				<input type="number" name="drink-quantity" id="Manuka Honey Rose Drink-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Frozen Strawberry Compote" value="6">
+				<label for="Frozen Strawberry Compote">冰雪奇緣</label>
+				<input type="number" name="drink-quantity" id="Frozen Strawberry Compote-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Love Berry Smoothie" value="7">
+				<label for="Love Berry Smoothie">愛戀莓果果昔</label>
+				<input type="number" name="drink-quantity" id="Love Berry Smoothie-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Rose smoothie" value="8">
+				<label for="Rose smoothie">玫瑰花果昔</label>
+				<input type="number" name="drink-quantity" id="Rose smoothie-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="drink" id="Strawberry Smoothie" value="9">
+				<label for="Strawberry Smoothie">草莓彩珠冰沙</label>
+				<input type="number" name="drink-quantity" id="Strawberry Smoothie-quantity" min="0" value="0"  style="width: 25px;">
+			</td>
+		</tr>
+
+		<tr>
+			<th>加點鮮奶吧<br>
+				<small>紐西蘭直送的鮮奶喔～</small></th>
+			<td>
+				<input type="checkbox" name="milk" id="Black Honey Pearl Thick Milk Tea" value="1">
+				<label for="Black Honey Pearl Thick Milk Tea">黑蜜珍珠濃鮮奶茶</label>
+				<input type="number" name="milk-quantity" id="Black Honey Pearl Thick Milk Tea-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="milk" id="New Zealand milk tea" value="2">
+				<label for="New Zealand milk tea">紐西蘭鮮奶蓋茶</label>
+				<input type="number" name="milk-quantity" id="New Zealand milk tea-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="milk" id="Cocoa milk tea whith fresh milk cap" value="3">
+				<label for="Cocoa milk tea whith fresh milk cap">可可鮮奶茶+鮮奶蓋</label>
+				<input type="number" name="milk-quantity" id="Cocoa milk tea whith fresh milk cap-quantity" min="0" value="0"  style="width: 25px;">
+			</td>
+		</tr>
+
+		<tr>
+			<th>來點茶吧<br>
+				<small>水果茶、台灣產地直送茶葉</small></th>
+			<td>
+				<input type="checkbox" name="tea" id="Alishan Alpine Green Tea" value="1">
+				<label for="Alishan Alpine Green Tea">阿里山高山青茶</label>
+				<input type="number" name="tea-quantity" id="Alishan Alpine Green Tea-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="tea" id="Golden Buckwheat Green Tea" value="2">
+				<label for="Golden Buckwheat Green Tea">黃金蕎麥綠茶</label>
+				<input type="number" name="tea-quantity" id="Golden Buckwheat Green Tea-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="tea" id="Flower and fruit honey tea" value="3">
+				<label for="Flower and fruit honey tea">花果蜜調茶</label>
+				<input type="number" name="tea-quantity" id="Flower and fruit honey tea-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="tea" id="Manuka Orange Bergamot Tea" value="4">
+				<label for="Manuka Orange Bergamot Tea">麥蘆卡桔香檸檬茶</label>
+				<input type="number" name="tea-quantity" id="Manuka Orange Bergamot Tea-quantity" min="0" value="0"  style="width: 25px;">
+				<br>
+				<input type="checkbox" name="tea" id="Manuka Lemon Honey Drink" value="5">
+				<label for="Manuka Lemon Honey Drink">麥蘆卡檸香蜂蜜飲</label>
+				<input type="number" name="tea-quantity" id="Manuka Lemon Honey Drink-quantity" min="0" value="0" style="width: 25px;">
+				<br>
+				<input type="checkbox" name="tea" id="Black Currant Tea" value="6">
+				<label for="Black Currant Tea">紐西蘭麥蘆卡花果茶</label>
+				<input type="number" name="tea-quantity" id="Black Currant Tea-quantity" min="0" value="0" style="width: 25px;">
+				<br>
+				<input type="checkbox" name="tea" id="Colorful Fruit Green Tea" value="7">
+				<label for="Colorful Fruit Green Tea">繽紛水果綠茶</label>
+				<input type="number" name="tea-quantity" id="Colorful Fruit Green Tea-quantity" min="0" value="0" style="width: 25px;">
+			</td>
+		</tr>
+
+		<tr>
+			<th>吃點甜的吧<br>
+				<small>各式手作甜點</small></th>
+			<td>
+				<input type="checkbox" name="dessert" id="Manuka Honey Ice Cream" value="1">
+				<label for="Manuka Honey Ice Cream">麥蘆卡蜂蜜冰淇淋</label>
+				<input type="number" name="dessert-quantity" id="Manuka Honey Ice Cream-quantity" min="0" value="0" style="width: 25px;">
+				<br>
+				<input type="checkbox" name="dessert" id="egg roll" value="2">
+				<label for="egg roll">棉被捲</label>
+				<input type="number" name="dessert-quantity" id="egg roll-quantity" min="0" value="0" style="width: 25px;">
+				<br>
+				<input type="checkbox" name="dessert" id="egg tart" value="3">
+				<label for="egg tart">蛋塔</label>
+				<input type="number" name="dessert-quantity" id="egg tart-quantity" min="0" value="0" style="width: 25px;">
+			</td>
+		</tr>
+
+		<tr>
+			<th>甜點口味選擇</th>
+			<td>
+				<select name="taste" multiple size="6">
+					<optgroup label="Ice Cream">
+						<option value="1">麥蘆卡蜂蜜</option>
+						<option value="2">麥蘆卡蜂蜜+香草</option>
+						<option value="3">麥蘆卡蜂蜜+草莓</option>
+					</optgroup>
+					
+					<optgroup label="egg roll">
+						<option value="4">原味+卡士達</option>
+						<option value="5">抹茶+紅豆</option>
+					</optgroup>
+					
+					<optgroup label="egg tart">
+						<option value="6">原味</option>
+						<option value="7">抹茶</option>
+						<option value="8">巧克力</option>
+					</optgroup>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<section class="Btns">
+		<input type="reset" value="清除重填">
+    	<input type="submit" onClick="show1()" value="送出">
+	</section>
+</form>
+
+	</main>
+	
+	<footer>
+        <small>
+            <dl>
+                <p class="info"><strong>連絡資訊：</strong></p>
+                <dd>phone：
+                    <a class="link phone" href="phoneto:048373300" target="_blank">04-837-3300</a>
+                </dd>
+                <dd>address：
+                    <a class="link address" href="https://goo.gl/maps/Jj4y9YkQUEu6E6i6A" target="_blank">
+                        彰化縣員林市中正路325號</a>
+                </dd>
+            </dl>
+        </small>
+    </footer>
+	
+	
+</body>
+</html>

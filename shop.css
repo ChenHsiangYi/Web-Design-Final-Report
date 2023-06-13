@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+/* 整體架構設定 */
+body {
+    text-align: center;
+    background-image: url("img/bodyimg01.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+    align-items: center;
+}
+
+div {
+    box-sizing: content-box;
+    max-width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+/* 導覽總設定 */
+
+nav {
+    display: inline-block;
+}
+
+/* 導覽鼠標設定 */
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+/* 大標題設定 */
+h1 {
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px darkblue;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* 次標題設定 */
+h2 {
+    font-size: 20px;
+    text-align: left;
+    color: dodgerblue;
+    line-height: 0.5;
+}
+
+/* 內文設定 */
+p {
+    text-align: left;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.info {
+	color: #fff;
+}
+
+/* 頁尾設定 */
+footer {
+    color: whitesmoke;
+    text-align: center;
+    align-items: center;
+    margin-top: 45px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info {
+    margin-left: 45px;
+    margin-bottom: 0;
+	text-align: center;
+}
+
+
+/*內容區塊邊框設定*/
+#contents {
+	width: 798px;
+	margin: 40px auto;
+	padding: 40px 80px;
+	border: 1px solid #f6bb9e;
+	background-color: #fff;
+}
+
+.Form {
+	text-align: left;
+}
+
+
+/*表格設定*/
+.Table {
+  width: 100%;
+  margin-bottom: 30px;
+  border: 2px solid #f6bb9e;
+  border-collapse: collapse;
+}
+.Table th,
+.Table td {
+  padding: 10px 20px;
+  border: 1px solid #f6bb9e;
+}
+.Table th {
+  width: 10em;
+  background-color: #FBF9CC;
+  text-align: center;
+}
+.Table caption {
+  margin-bottom: 10px;
+}
+
+/*輸入表單設定*/
+.Table input[type="text"],
+.Table input[type="email"],
+.Table input[type="tel"],
+.Table textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.Table input[type="text"]:focus,
+.Table input[type="email"]:focus,
+.Table input[type="tel"]:focus,
+.Table textarea:focus {
+  background-color: #ffffee;
+  outline: none;
+  border-left: 5px solid #ffa700;
+}
+
+/*滑鼠指標樣式*/
+label,
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+
+/*按鈕設定*/
+.Btns {
+  text-align: center;
+}
+
+/*按鈕基本樣式*/
+.Btns input {
+  width: 200px;
+  margin: 0 10px;
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #f6bb9e;
+  border-radius: 10px;
+  font-size: 1em;
+ appearance: none;
+}
+
+/*送出按鈕的樣式*/
+.Btns input[type="submit"] {
+  background: #FBF9CC;
+}
+
+/*滑鼠移到按鈕時*/
+.Btns input:hover {
+  opacity: 0.7;
+}
+
+
+.link:link {
+    color: whitesmoke;
+}
+
+.link:visited {
+    color: whitesmoke;
+}
+
+.link:hover {
+    color: lightsalmon;
+}
+
+/* 小 */
+@media screen and (max-width:640px) {
+    /* 大標題設定 */
+    h1 {
+        text-align: left;
+        font-size: 40px;
+        color: whitesmoke;
+        margin-left: 30px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .subH1 {
+        text-align: left;
+        font-size: 15px;
+        color: rgb(231, 227, 227);
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+    
+    /* 導覽設定 */    
+    .leftLink {
+        margin-left: 5px;
+    }
+    
+    li {
+        list-style-type: none;
+        display: inline;
+        font-size: 8px;
+        margin-right: 15px;
+        margin-top: 0;
+        background-color: whitesmoke;
+        opacity: 70%;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+
+    /* 最新消息字體設定 */
+    h2 {
+        text-align: left;
+        color: whitesmoke;
+        font-size: 15px;
+        margin-left: 80px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    /* 圖片設定 */
+    img {
+        margin-right: 24px;
+    }
+    
+    /* 頁尾設定 */
+    footer {
+        font-size: 0.5px;
+    }
+    
+    .info {
+        font-size: 0.5px;
+    }
+}
+
+/* 中 */
+@media screen and (min-width:641px) and (max-width:980px) {
+    /* 大標題設定 */
+    h1 {
+        text-align: left;
+        font-size: 60px;
+        color: whitesmoke;
+        margin-left: 40px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .subH1 {
+        text-align: left;
+        font-size: 28px;
+        color: rgb(231, 227, 227);
+        margin-left: 45px;
+        margin-top: 0px;
+    }
+
+    /* 導覽設定 */
+    .leftLink {
+        margin-left: 15px;
+    }
+
+    li {
+        list-style-type: none;
+        display: inline;
+        font-size: 12px;
+        margin-right: 30px;
+        margin-top: 0;
+        background-color: whitesmoke;
+        opacity: 70%;
+        border-radius: 20px;
+        padding: 7.5px 30px;
+    }
+
+    /* 最新消息字體設定 */
+    h2 {
+        text-align: left;
+        color: whitesmoke;
+        font-size: 20px;
+        margin-left: 120px;
+        margin-top: 35px;
+        margin-bottom: 7.5px;
+    }
+    
+    /* 圖片設定 */
+    img {
+        margin-right: 36px;
+    }
+    
+    /* 頁尾設定 */
+    footer {
+        font-size: 0.75px;
+    }
+    
+    .info {
+        font-size: 0.75px;
+    }
+}
+
+/* 大 */
+@media screen and (min-width:981px) {
+    /* 大標題設定 */
+    h1 {
+        text-align: left;
+        font-size: 80px;
+        color: whitesmoke;
+        margin-left: 50px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .subH1 {
+        text-align: left;
+        font-size: 36px;
+        color: rgb(231, 227, 227);
+        margin-left: 55px;
+        margin-top: 0px;
+    }
+    
+    /* 導覽設定 */
+    .leftLink {
+        margin-left: 60px;
+    }
+    
+    li {
+        list-style-type: none;
+        display: inline;
+        margin-right: 60px;
+        margin-top: 0;
+        background-color: whitesmoke;
+        opacity: 70%;
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
+    
+    /* 最新消息字體設定 */
+    h2 {
+        text-align: left;
+        color: whitesmoke;
+        font-size: 25px;
+        margin-left: 200px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* 圖片設定 */
+    img {
+        margin-right: 60px;
+    }
+
+    /* 頁尾設定 */
+    footer {
+        font-size: 1px;
+    }
+
+    .info {
+        font-size: 1px;
+    }
+}

@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* 整體架構設定 */
+body {
+    text-align: center;
+    background-image: url("img/intro.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+    align-items: center;
+}
+
+div {
+    box-sizing: content-box;
+    max-width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+/* 導覽總設定 */
+nav {
+    display: inline-block;
+}
+
+/* 導覽鼠標設定 */
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+/* 大標題設定 */
+h1 {
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px darkblue;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* 次標題設定 */
+h2 {
+    font-size: 20px;
+    text-align: left;
+    color: dodgerblue;
+    line-height: 0.5;
+}
+
+/* 內文設定 */
+p {
+    text-align: left;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* 頁尾設定 */
+footer {
+    color: whitesmoke;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info {
+    text-align: center;
+    font-size: 1px;
+    margin-bottom: 0;
+}
+
+.link:link {
+    color: whitesmoke;
+}
+
+.link:visited {
+    color: whitesmoke;
+}
+
+.link:hover {
+    color: lightsalmon;
+}
+
+@media screen and (max-width:640px) {
+    div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+    /* 導覽設定 */    
+    li {
+        list-style-type: none;
+        display: inline;
+        font-size: 8px;
+        margin-right: 15px;
+        margin-top: 0;
+        background-color: whitesmoke;
+        opacity: 80%;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+    
+    /* 次標題設定 */
+    h2 {
+        margin-left: 40px;
+    }
+
+    /* 內文設定 */
+    p {
+        margin: 5px 40px;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:980px){
+    div {
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+        
+    /* 導覽設定 */    
+    li {
+        list-style-type: none;
+        display: inline;
+        font-size: 10px;
+        margin-right: 30px;
+        margin-top: 0;
+        background-color: whitesmoke;
+        opacity: 70%;
+        border-radius: 20px;
+        padding: 7.5px 30px;
+    }
+    
+    /* 次標題設定 */
+    h2 {
+        margin-left: 60px;
+    }
+    
+    /* 內文設定 */
+    p {
+        margin: 7.5px 60px;
+    }
+}
+
+@media screen and (min-width:981px) {
+    div {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    
+    /* 導覽設定 */
+    li {
+        list-style-type: none;
+        display: inline;
+        margin-right: 60px;
+        margin-top: 0;
+        background-color: whitesmoke;
+        opacity: 70%;
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
+    
+    /* 次標題設定 */
+    h2 {
+        margin-left: 80px;
+    }
+
+    /* 內文設定 */
+    p {
+        margin: 10px 80px;
+    }
+}
